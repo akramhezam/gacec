@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="GACECCon Admin - Manage projects JSON for the website.">
+    <title>GACECCon Admin | Projects Editor</title>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: {
+                            DEFAULT: 'oklch(var(--color-primary-700) / <alpha-value>)',
+                            light: 'oklch(var(--color-primary-500) / <alpha-value>)',
+                            dark: 'oklch(var(--color-primary-900) / <alpha-value>)'
+                        },
+                        orange: {
+                            DEFAULT: 'oklch(var(--color-accent-500) / <alpha-value>)',
+                            light: 'oklch(var(--color-accent-400) / <alpha-value>)',
+                            dark: 'oklch(var(--color-accent-600) / <alpha-value>)'
+                        },
+                        gray: {
+                            warm: 'oklch(var(--color-neutral-600) / <alpha-value>)',
+                            light: 'oklch(var(--color-neutral-100) / <alpha-value>)'
+                        }
+                    },
+                    fontFamily: {
+                        heading: ['var(--font-serif)'],
+                        body: ['var(--font-sans)']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Source+Serif+4:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/theme.css">
+</head>
+<body class="bg-gray-light min-h-screen">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+        <header class="flex flex-col gap-3 mb-10">
+            <div class="flex items-center gap-3">
+                <div class="w-12 h-12 bg-orange rounded-lg flex items-center justify-center">
+                    <span class="text-white font-heading font-bold text-xl">G</span>
+                </div>
+                <div>
+                    <h1 class="text-2xl font-heading font-bold text-navy">GACECCon Admin</h1>
+                    <p class="text-gray-warm">Projects JSON editor</p>
+                </div>
+            </div>
+            <p class="text-sm text-gray-warm">For production: add Decap CMS on Netlify (collections for projects etc.).</p>
+        </header>
+
+        <!-- Login -->
+        <section id="login-section" class="bg-white rounded-2xl shadow-xl p-8 max-w-xl">
+            <h2 class="text-xl font-heading font-bold text-navy mb-4">Admin Login</h2>
+            <p class="text-gray-warm mb-6">Enter the admin password to edit projects.</p>
+            <form id="login-form" class="space-y-4">
+                <div>
+                    <label for="admin-password" class="block text-sm font-semibold text-navy mb-2">Password</label>
+                    <input id="admin-password" type="password" class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-orange" required>
+                </div>
+                <button type="submit" class="bg-orange hover:bg-orange-dark text-white px-6 py-3 rounded-lg font-semibold">Unlock Editor</button>
+                <p id="login-error" class="text-sm text-red-600 hidden">Incorrect password. Try again.</p>
+            </form>
+        </section>
+
+        <!-- Editor -->
+        <section id="editor-section" class="hidden">
+            <div class="grid lg:grid-cols-12 gap-8">
+                <aside class="lg:col-span-4 bg-white rounded-2xl shadow-xl p-6">
+                    <div class="flex items-center justify-between mb-4">
+                        <h3 class="text-lg font-heading font-bold text-navy">Projects</h3>
+                        <button id="add-project" class="text-sm bg-orange text-white px-3 py-2 rounded-lg">Add New</button>
+                    </div>
+                    <ul id="projects-list" class="space-y-3 max-h-[520px] overflow-y-auto"></ul>
+                </aside>
+
+                <div class="lg:col-span-8 bg-white rounded-2xl shadow-xl p-6">
+                    <form id="project-form" class="space-y-6">
+                        <input type="hidden" id="project-id">
+
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-sm font-semibold text-navy mb-2">Title</label>
+                                <input id="title" class="w-full px-4 py-3 rounded-xl border border-gray-300" required>
+                            </div>
+                            <div>
+                                <label class="block text-sm font-semibold text-navy mb-2">Year</label>
+                                <input id="year" class="w-full px-4 py-3 rounded-xl border border-gray-300" placeholder="2023/09" required>
+                            </div>
+                            <div>
+                                <label class="block text-sm font-semibold text-navy mb-2">Category</label>
+                                <select id="category" class="w-full px-4 py-3 rounded-xl border border-gray-300">
+                                    <option>Buildings</option>
+                                    <option>Commercial</option>
+                                    <option>Residential</option>
+                                    <option>Industrial</option>
+                                    <option>Infrastructure</option>
+                                    <option>Religious</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="block text-sm font-semibold text-navy mb-2">Type</label>
+                                <input id="type" class="w-full px-4 py-3 rounded-xl border border-gray-300">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-semibold text-navy mb-2">Cost</label>
+                                <input id="cost" class="w-full px-4 py-3 rounded-xl border border-gray-300" placeholder="300,000 $">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-semibold text-navy mb-2">Status</label>
+                                <select id="status" class="w-full px-4 py-3 rounded-xl border border-gray-300">
+                                    <option>Under construction</option>
+                                    <option>Finished</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="block text-sm font-semibold text-navy mb-2">Client</label>
+                                <input id="client" class="w-full px-4 py-3 rounded-xl border border-gray-300">
+                            </div>
+                            <div class="flex items-end gap-2">
+                                <input id="featured" type="checkbox" class="w-5 h-5">
+                                <label for="featured" class="text-sm font-semibold text-navy">Featured on Home</label>
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="block text-sm font-semibold text-navy mb-2">Short Description</label>
+                            <textarea id="shortDesc" class="w-full px-4 py-3 rounded-xl border border-gray-300" rows="2"></textarea>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-semibold text-navy mb-2">Full Description</label>
+                            <textarea id="fullDesc" class="w-full px-4 py-3 rounded-xl border border-gray-300" rows="3"></textarea>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-semibold text-navy mb-2">Image URLs (comma separated)</label>
+                            <textarea id="imageUrls" class="w-full px-4 py-3 rounded-xl border border-gray-300" rows="2"></textarea>
+                        </div>
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-sm font-semibold text-navy mb-2">Tasks (one per line)</label>
+                                <textarea id="tasks" class="w-full px-4 py-3 rounded-xl border border-gray-300" rows="4"></textarea>
+                            </div>
+                            <div>
+                                <label class="block text-sm font-semibold text-navy mb-2">Requirements (one per line)</label>
+                                <textarea id="requirements" class="w-full px-4 py-3 rounded-xl border border-gray-300" rows="4"></textarea>
+                            </div>
+                        </div>
+
+                        <div class="flex flex-wrap gap-4">
+                            <button type="submit" class="bg-navy text-white px-6 py-3 rounded-lg font-semibold">Save Changes</button>
+                            <button type="button" id="delete-project" class="bg-red-600 text-white px-6 py-3 rounded-lg font-semibold">Delete</button>
+                            <button type="button" id="download-json" class="bg-orange text-white px-6 py-3 rounded-lg font-semibold">Download JSON</button>
+                            <button type="button" id="save-json" class="bg-gray-800 text-white px-6 py-3 rounded-lg font-semibold">Save with File Picker</button>
+                        </div>
+
+                        <p id="save-status" class="text-sm text-gray-warm"></p>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        const PASSWORD = 'gaceccon2026';
+        const loginSection = document.getElementById('login-section');
+        const editorSection = document.getElementById('editor-section');
+        const loginForm = document.getElementById('login-form');
+        const loginError = document.getElementById('login-error');
+
+        let projects = [];
+        let selectedId = null;
+
+        loginForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const input = document.getElementById('admin-password').value.trim();
+            if (input === PASSWORD) {
+                loginSection.classList.add('hidden');
+                editorSection.classList.remove('hidden');
+                loadProjects();
+            } else {
+                loginError.classList.remove('hidden');
+            }
+        });
+
+        async function loadProjects() {
+            const response = await fetch('data/projects.json');
+            const data = await response.json();
+            projects = data.projects || [];
+            renderProjectList();
+            if (projects.length > 0) selectProject(projects[0].id);
+        }
+
+        function renderProjectList() {
+            const list = document.getElementById('projects-list');
+            list.innerHTML = projects.map(p => `
+                <li>
+                    <button class="w-full text-left px-4 py-3 rounded-xl border ${p.id === selectedId ? 'border-orange bg-orange/10' : 'border-gray-200'}" onclick="selectProject('${p.id}')">
+                        <div class="font-semibold text-navy">${p.title}</div>
+                        <div class="text-xs text-gray-warm">${p.category} • ${p.year}</div>
+                    </button>
+                </li>
+            `).join('');
+        }
+
+        window.selectProject = function(id) {
+            selectedId = id;
+            const project = projects.find(p => p.id === id);
+            if (!project) return;
+
+            document.getElementById('project-id').value = project.id;
+            document.getElementById('title').value = project.title || '';
+            document.getElementById('year').value = project.year || '';
+            document.getElementById('category').value = project.category || '';
+            document.getElementById('type').value = project.type || '';
+            document.getElementById('cost').value = project.cost || '';
+            document.getElementById('status').value = project.status || '';
+            document.getElementById('client').value = project.client || '';
+            document.getElementById('featured').checked = !!project.featured;
+            document.getElementById('shortDesc').value = project.shortDesc || '';
+            document.getElementById('fullDesc').value = project.fullDesc || '';
+            document.getElementById('imageUrls').value = (project.imageUrls || []).join(', ');
+            document.getElementById('tasks').value = (project.tasks || []).join('\n');
+            document.getElementById('requirements').value = (project.requirements || []).join('\n');
+
+            renderProjectList();
+        };
+
+        document.getElementById('add-project').addEventListener('click', () => {
+            const newProject = {
+                id: `new-${Date.now()}`,
+                title: 'New Project',
+                year: '',
+                category: 'Buildings',
+                type: '',
+                cost: '',
+                status: 'Under construction',
+                client: '',
+                shortDesc: '',
+                fullDesc: '',
+                imageUrls: [],
+                tasks: [],
+                requirements: [],
+                featured: false
+            };
+            projects.unshift(newProject);
+            selectProject(newProject.id);
+        });
+
+        document.getElementById('project-form').addEventListener('submit', (e) => {
+            e.preventDefault();
+            const index = projects.findIndex(p => p.id === selectedId);
+            if (index === -1) return;
+
+            projects[index] = {
+                ...projects[index],
+                id: document.getElementById('project-id').value.trim() || projects[index].id,
+                title: document.getElementById('title').value.trim(),
+                year: document.getElementById('year').value.trim(),
+                category: document.getElementById('category').value.trim(),
+                type: document.getElementById('type').value.trim(),
+                cost: document.getElementById('cost').value.trim(),
+                status: document.getElementById('status').value.trim(),
+                client: document.getElementById('client').value.trim(),
+                shortDesc: document.getElementById('shortDesc').value.trim(),
+                fullDesc: document.getElementById('fullDesc').value.trim(),
+                imageUrls: document.getElementById('imageUrls').value.split(',').map(v => v.trim()).filter(Boolean),
+                tasks: document.getElementById('tasks').value.split('\n').map(v => v.trim()).filter(Boolean),
+                requirements: document.getElementById('requirements').value.split('\n').map(v => v.trim()).filter(Boolean),
+                featured: document.getElementById('featured').checked
+            };
+
+            selectedId = projects[index].id;
+            renderProjectList();
+            document.getElementById('save-status').textContent = 'Changes saved locally. Download or save JSON to persist.';
+        });
+
+        document.getElementById('delete-project').addEventListener('click', () => {
+            if (!selectedId) return;
+            projects = projects.filter(p => p.id !== selectedId);
+            selectedId = projects[0]?.id || null;
+            renderProjectList();
+            if (selectedId) {
+                selectProject(selectedId);
+            } else {
+                document.getElementById('project-form').reset();
+            }
+        });
+
+        function getJsonBlob() {
+            return new Blob([JSON.stringify({ projects }, null, 2)], { type: 'application/json' });
+        }
+
+        document.getElementById('download-json').addEventListener('click', () => {
+            const blob = getJsonBlob();
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'projects.json';
+            a.click();
+            URL.revokeObjectURL(url);
+        });
+
+        document.getElementById('save-json').addEventListener('click', async () => {
+            const status = document.getElementById('save-status');
+            try {
+                if (!window.showSaveFilePicker) {
+                    status.textContent = 'File picker not supported in this browser. Use Download JSON.';
+                    return;
+                }
+                const handle = await window.showSaveFilePicker({
+                    suggestedName: 'projects.json',
+                    types: [{ description: 'JSON', accept: { 'application/json': ['.json'] } }]
+                });
+                const writable = await handle.createWritable();
+                await writable.write(getJsonBlob());
+                await writable.close();
+                status.textContent = 'projects.json saved successfully.';
+            } catch (err) {
+                status.textContent = 'Save cancelled or failed.';
+            }
+        });
+    </script>
+</body>
+</html>

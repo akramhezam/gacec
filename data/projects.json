@@ -1,0 +1,367 @@
+{
+  "projects": [
+    {
+      "id": "5-1",
+      "title": "Mr. AbdulKarim Ahmed Hotel",
+      "year": "2021/5",
+      "category": "Buildings",
+      "type": "Hotel Building",
+      "status": "Under construction",
+      "client": "Mr. AbdulKarim Ahmed",
+      "donor": "Mr. AbdulKarim Ahmed",
+      "location": "Djibouti",
+      "shortDesc": "Ongoing luxury hotel construction in Djibouti.",
+      "fullDesc": "Comprehensive hotel building project including structural works, MEP coordination, and high-end finishing tailored to Djibouti’s climate and hospitality standards.",
+      "imageUrls": [
+        "images/proj/5.jpg",
+        "images/proj/6.jpg",
+        "images/proj/7.jpg"
+      ],
+      "tasks": [
+        "Site preparation and surveying",
+        "Foundation and structural framing",
+        "Concrete, iron, and slab works",
+        "MEP rough-ins and coordination",
+        "Finishing, fit-out, and quality checks"
+      ],
+      "requirements": [
+        "Budget: ~$860K",
+        "Timeline: Multi-year",
+        "Compliance: Local Djibouti standards",
+        "Challenges: Ongoing coordination",
+        "Safety: Active site management"
+      ],
+      "featured": true
+    },
+    {
+      "id": "5-2",
+      "title": "A lWalid Company Building",
+      "year": "2021/6",
+      "category": "Buildings",
+      "type": "Commercial and Residential Building",
+      "status": "Under construction",
+      "client": "Mr. Amar AlZumaiker (A lWalid Company)",
+      "donor": "A lWalid Company",
+      "location": "Djibouti",
+      "shortDesc": "Mixed-use commercial and residential structure.",
+      "fullDesc": "A multi-story mixed-use development integrating retail spaces and residential units with durable structural design and efficient circulation.",
+      "imageUrls": [
+        "images/proj/6.jpg",
+        "images/proj/5.jpg",
+        "images/proj/7.jpg"
+      ],
+      "tasks": [
+        "Structural design coordination",
+        "Concrete and reinforcement works",
+        "Facade and blockwork",
+        "Internal partitions and finishes",
+        "On-site safety and QA"
+      ],
+      "requirements": [
+        "Budget: ~$811K",
+        "Timeline: Staged delivery",
+        "Compliance: Djibouti urban codes",
+        "Accessibility: Safe circulation",
+        "Durability: Long-term materials"
+      ],
+      "featured": true
+    },
+    {
+      "id": "5-3",
+      "title": "Dicoo Mobelia Warehouse",
+      "year": "2021/03",
+      "category": "Industrial",
+      "type": "Warehouse",
+      "status": "Under construction",
+      "client": "Mr. Mohame Ali (Dicoo Mobelia)",
+      "donor": "Dicoo Mobelia",
+      "location": "Djibouti",
+      "shortDesc": "Industrial warehouse construction.",
+      "fullDesc": "Design-and-build warehouse project with reinforced foundations, clear-span framing, and logistics-ready layout.",
+      "imageUrls": [
+        "images/proj/8.jpg",
+        "images/proj/2.jpg",
+        "images/proj/3.jpg"
+      ],
+      "tasks": [
+        "Site grading and leveling",
+        "Foundation and slab casting",
+        "Steel framing and roof",
+        "Industrial doors and loading bays",
+        "Drainage and utilities"
+      ],
+      "requirements": [
+        "Budget: ~$269K",
+        "Timeline: Phased execution",
+        "Compliance: Industrial safety",
+        "Clear-span interior",
+        "Heavy-load floor specs"
+      ],
+      "featured": true
+    },
+    {
+      "id": "5-4",
+      "title": "Mr. Mohamed Qemaneh House",
+      "year": "2020/11",
+      "category": "Residential",
+      "type": "House",
+      "status": "Under construction",
+      "client": "Mr. Mohamed Qemaneh",
+      "donor": "Mr. Mohamed Qemaneh",
+      "location": "Djibouti",
+      "shortDesc": "Private residence with modern finishes.",
+      "fullDesc": "Residential build with reinforced concrete structure, efficient layout planning, and high-quality finishing.",
+      "imageUrls": [
+        "images/proj/3.jpg",
+        "images/proj/7.jpg",
+        "images/proj/2.jpg"
+      ],
+      "tasks": [
+        "Foundation and blockwork",
+        "Roofing and waterproofing",
+        "Interior plaster and paint",
+        "Electrical and plumbing",
+        "Final finishing and handover"
+      ],
+      "requirements": [
+        "Budget: ~$73K",
+        "Timeline: Single-season",
+        "Quality: Residential-grade",
+        "Safety: Site supervision",
+        "Comfort: Thermal performance"
+      ],
+      "featured": false
+    },
+    {
+      "id": "5-5",
+      "title": "Hamoudi Commercial Center",
+      "year": "2020/2",
+      "category": "Commercial",
+      "type": "Concrete works, iron ceiling, design",
+      "status": "Finished",
+      "client": "Ministry of Awqaf and Islamic Affairs",
+      "donor": "Taiba Investment Company",
+      "location": "Plus Rambo",
+      "shortDesc": "Concrete works, iron ceiling, and design for a commercial center in Plus Rambo.",
+      "fullDesc": "Implementation of concrete works on the first floor with iron ceiling work and design for the Hamoudi Commercial Center. Funded by Taiba Investment Company, located in Plus Rambo. Total area covered includes first-floor structural and finishing works.",
+      "imageUrls": [
+        "images/proj/7.jpg",
+        "images/proj/8.jpg",
+        "images/proj/2.jpg"
+      ],
+      "tasks": [
+        "Concrete patching and leveling",
+        "Iron ceiling fabrication",
+        "Design coordination",
+        "Site installation",
+        "Quality inspection"
+      ],
+      "requirements": [
+        "Budget: ~$10K",
+        "Timeline: Short duration",
+        "Coordination: Business hours",
+        "Safety: Work-zone separation",
+        "Finish: Clean detailing"
+      ],
+      "featured": false
+    },
+    {
+      "id": "5-6",
+      "title": "ALRayan Mall",
+      "year": "2020/1",
+      "category": "Commercial",
+      "type": "Iron ceiling for cafeteria, administration and mosque",
+      "status": "Finished",
+      "client": "Ministry of Awqaf and Islamic Affairs",
+      "donor": "Umm Al-Qura Company",
+      "location": "Sunflower, Arheba",
+      "shortDesc": "Iron ceiling works for cafeteria, mosque, and administration at Rayan Mall, Arheba.",
+      "fullDesc": "Executing the iron ceiling of Al Rayan Cafeteria, the mosque, and the administration block. The project covers a total area of 1,050 square meters, located in Sunflower, Arheba. Funded by Umm Al-Qura Company.",
+      "imageUrls": [
+        "images/proj/6.jpg",
+        "images/proj/5.jpg",
+        "images/proj/8.jpg"
+      ],
+      "tasks": [
+        "Fabrication of iron ceiling frames",
+        "On-site installation",
+        "Coordination with MEP",
+        "Finishing and alignment",
+        "Final inspection"
+      ],
+      "requirements": [
+        "Budget: ~$300K",
+        "Timeline: Tight schedule",
+        "Standards: Structural safety",
+        "Coordination: Multi-zone",
+        "Finish: Clean, durable"
+      ],
+      "featured": true
+    },
+    {
+      "id": "5-7",
+      "title": "Minister of Labor CNSS Hangar Arta",
+      "year": "2020/03",
+      "category": "Infrastructure",
+      "type": "Hangar",
+      "status": "Finished",
+      "client": "Ministry of Labor CNSS",
+      "donor": "Ministry of Labor CNSS",
+      "location": "Arta Governorate",
+      "shortDesc": "Hangar construction covering 3,000 sqm in Arta Governorate.",
+      "fullDesc": "Execution of a large-scale hangar with an area of 3,000 square meters in Arta Governorate. Owned and funded by the Ministry of Labor CNSS. The project includes robust steel framing, secure access systems, and durable exterior finishes.",
+      "imageUrls": [
+        "images/proj/8.jpg",
+        "images/proj/2.jpg",
+        "images/proj/3.jpg"
+      ],
+      "tasks": [
+        "Site leveling and layout",
+        "Steel structure erection",
+        "Roofing and cladding",
+        "Access door systems",
+        "Handover and testing"
+      ],
+      "requirements": [
+        "Budget: ~$73K",
+        "Timeline: Single quarter",
+        "Safety: Industrial site",
+        "Durability: Weather resistance",
+        "Access: Secure operations"
+      ],
+      "featured": false
+    },
+    {
+      "id": "5-8",
+      "title": "Binaya-immo Group Foundations (840 Apartments)",
+      "year": "2019/07",
+      "category": "Buildings",
+      "type": "27 building foundations, 200 sqm each",
+      "status": "Finished",
+      "client": "Ministry of Planning and Development",
+      "donor": "Saudi Development Bank",
+      "location": "PK-13",
+      "shortDesc": "Foundation works for 27 buildings (840 Apartments) at PK-13.",
+      "fullDesc": "Implementing the rule of 27 buildings, each building measuring 200 square meters, for the 840 Apartments project at PK-13. Owned by the Ministry of Planning and Development and funded by the Saudi Development Bank. Executed by Binaya-Immo Group.",
+      "imageUrls": [
+        "images/proj/2.jpg",
+        "images/proj/3.jpg",
+        "images/proj/8.jpg"
+      ],
+      "tasks": [
+        "Geotechnical checks",
+        "Foundation excavation",
+        "Rebar and concrete works",
+        "Quality testing and curing",
+        "Batch handover"
+      ],
+      "requirements": [
+        "Budget: ~$255K",
+        "Timeline: Multi-lot",
+        "Compliance: Structural specs",
+        "Consistency: 32 foundations",
+        "Logistics: Material scheduling"
+      ],
+      "featured": false
+    },
+    {
+      "id": "5-9",
+      "title": "Mosque ELME GASSOD",
+      "year": "2023/09",
+      "category": "Religious",
+      "type": "Mosque construction",
+      "status": "Finished",
+      "client": "Al-haji Elmi Guesod",
+      "donor": "Al-haji Elmi Guesod",
+      "location": "Dikhil",
+      "shortDesc": "Full mosque with annexes and imam's residence in Dikhil — 750 sqm.",
+      "fullDesc": "Mosque for men and women, its annexes, and the imam's residence in Dikhil. Total area: 750 square meters. Owned and funded by Al-haji Elmi Guesod. Comprehensive construction including structural work, architectural detailing, and finishing.",
+      "imageUrls": [
+        "images/proj/mosq.jpg",
+        "images/proj/mosq2.jpg",
+        "images/proj/9.jpg"
+      ],
+      "tasks": [
+        "Foundation and main hall structure",
+        "Dome and architectural elements",
+        "Interior finishes and lighting",
+        "Ablution and service areas",
+        "Final inspection and handover"
+      ],
+      "requirements": [
+        "Budget: ~$1.34M",
+        "Timeline: 8 months",
+        "Quality: Architectural detail",
+        "Compliance: Religious standards",
+        "Accessibility: Community use"
+      ],
+      "featured": true
+    },
+    {
+      "id": "5-10",
+      "title": "Mosquee Nashroudiin",
+      "year": "2020/04",
+      "category": "Religious",
+      "type": "Mosque with annexes and imam's residence",
+      "status": "Finished",
+      "client": "Al-haji Osman Okieh",
+      "donor": "Al-haji Osman Okieh",
+      "location": "Plateau de Serpent, Djibouti",
+      "shortDesc": "Mosque with annexes and imam's residence in Djibouti — 1,150 sqm.",
+      "fullDesc": "Mosque for men and women, its annexes, and the imam's residence on Plateau de Serpent, Djibouti. Total area: 1,150 square meters. Owned and funded by Al-haji Osman Okieh. Full structural, architectural, and finishing works executed by GACEC.",
+      "imageUrls": [
+        "images/proj/mosq.jpg",
+        "images/proj/mosq2.jpg",
+        "images/proj/9.jpg"
+      ],
+      "tasks": [
+        "Foundation and structural works",
+        "Prayer hall and dome construction",
+        "Imam's residence and annexes",
+        "Interior finishing and lighting",
+        "Final inspection and handover"
+      ],
+      "requirements": [
+        "Budget: Confidential",
+        "Area: 1,150 sqm",
+        "Location: Plateau de Serpent, Djibouti",
+        "Compliance: Religious facility standards",
+        "Accessibility: Community use"
+      ],
+      "featured": false
+    },
+    {
+      "id": "5-11",
+      "title": "4 Villas Duplex and Terrasse",
+      "year": "2020/05",
+      "category": "Residential",
+      "type": "4 Duplex villas with terraces",
+      "status": "Finished",
+      "client": "Zahra Ibrahim Direh",
+      "donor": "Zahra Ibrahim Direh",
+      "location": "Haramous, Djibouti",
+      "shortDesc": "4 duplex villas with terraces in Haramous — 1,600 sqm.",
+      "fullDesc": "Construction of 4 duplex villas with terraces in Haramous, Djibouti. Total area: 1,600 square meters. Owned and funded by Zahra Ibrahim Direh. Full structural, finishing, and landscaping works executed by GACEC.",
+      "imageUrls": [
+        "images/proj/3.jpg",
+        "images/proj/7.jpg",
+        "images/proj/2.jpg"
+      ],
+      "tasks": [
+        "Foundation and structural framing",
+        "Duplex layout and partition works",
+        "Terrace construction and waterproofing",
+        "Interior finishing and fit-out",
+        "Final handover and inspection"
+      ],
+      "requirements": [
+        "Budget: Confidential",
+        "Area: 1,600 sqm (4 villas)",
+        "Location: Haramous, Djibouti",
+        "Type: Duplex with terraces",
+        "Quality: Residential-grade finishing"
+      ],
+      "featured": false
+    }
+  ]
+}

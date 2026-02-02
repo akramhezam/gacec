@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Contact GACEC for your construction and engineering needs in Djibouti. Reach our team for project inquiries and partnerships.">
+    <meta name="keywords"
+        content="contact GACEC, construction inquiry, engineering consultation, Djibouti construction company">
+    <meta name="author" content="GACEC">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://gaceccon.com/contact.html">
+
+    <title>Contact Us | GACEC - Engineering Excellence in Djibouti</title>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        /* OKLCH - Professional Patterns */
+                        primary: 'oklch(0.65 0.25 35)',
+                        surface: 'oklch(0.25 0.03 260)',
+                        'on-surface': 'oklch(0.98 0.01 240)',
+
+                        industrial: {
+                            DEFAULT: '#1a1f2c',
+                            light: '#334155',
+                            dark: '#0f172a'
+                        },
+                        safety: {
+                            DEFAULT: '#ff4d00',
+                            vivid: '#ff3d00'
+                        },
+                        concrete: {
+                            light: '#f8fafc',
+                            DEFAULT: '#f3f4f6',
+                            dark: '#e2e8f0'
+                        }
+                    },
+                    fontFamily: {
+                        heading: ['"Chakra Petch"', 'sans-serif'],
+                        body: ['"Inter"', 'sans-serif'],
+                        mono: ['"JetBrains Mono"', 'monospace']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;500;600;700&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/theme.css">
+
+    <!-- Custom Styles -->
+    <style>
+        /* Form inputs */
+        .form-input {
+            transition: all .3s ease;
+        }
+
+        .form-input:focus {
+            border-color: #c27530;
+            box-shadow: 0 0 0 4px rgba(194, 117, 48, 0.15);
+        }
+
+        /* Contact cards */
+        .contact-card {
+            transition: transform .38s cubic-bezier(.4, 0, .2, 1),
+                box-shadow .38s cubic-bezier(.4, 0, .2, 1);
+        }
+
+        .contact-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 16px 40px -10px rgba(26, 63, 72, 0.28);
+        }
+
+        /* Office cards */
+        .office-card {
+            transition: transform .38s cubic-bezier(.4, 0, .2, 1);
+        }
+
+        .office-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .office-card:hover .office-icon {
+            background-color: #c27530;
+            color: #fff;
+        }
+
+        .office-icon {
+            transition: all .3s ease;
+        }
+
+        /* Success message */
+        .success-message {
+            display: none;
+            animation: slideIn .5s ease;
+        }
+
+        .success-message.show {
+            display: block;
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+
+            .contact-card,
+            .office-card,
+            .office-icon,
+            .form-input {
+                transition: none;
+            }
+        }
+    </style>
+</head>
+
+<body class="bg-white">
+    <!-- ========== NAVIGATION ========== -->
+    <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-navy">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <a href="index.html" class="flex items-center space-x-3">
+                    <img src="images/logo24.png" alt="GACEC Logo" class="nav-logo-img">
+                    <div>
+                        <span class="text-white font-heading font-bold text-xl tracking-tight">GACEC</span>
+                        <span class="hidden sm:block text-gray-300 text-xs">Engineering Excellence</span>
+                    </div>
+                </a>
+
+                <div class="hidden lg:flex items-center space-x-8">
+                    <a href="index.html"
+                        class="text-concrete/60 font-mono text-xs hover:text-safety transition-colors tracking-widest uppercase">Home</a>
+                    <a href="book.html"
+                        class="text-concrete/60 font-mono text-xs hover:text-safety transition-colors tracking-widest uppercase">Profile</a>
+                    <a href="services.html"
+                        class="text-concrete/60 font-mono text-xs hover:text-safety transition-colors tracking-widest uppercase">Services</a>
+                    <a href="projects.html"
+                        class="text-concrete/60 font-mono text-xs hover:text-safety transition-colors tracking-widest uppercase">Projects</a>
+                    <a href="staff.html"
+                        class="text-concrete/60 font-mono text-xs hover:text-safety transition-colors tracking-widest uppercase">Staff</a>
+                    <a href="contact.html"
+                        class="bg-safety hover:bg-safety-vivid text-white px-5 py-2 clip-path-slant font-heading font-bold text-sm transition-all">
+                        ESTABLISH_LINK
+                    </a>
+                </div>
+
+                <button id="mobile-menu-btn" class="lg:hidden text-white p-2" aria-label="Toggle mobile menu">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path id="menu-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+            </div>
+
+            <div id="mobile-menu" class="mobile-menu lg:hidden bg-industrial-dark border-t border-industrial-light/10">
+                <div class="px-4 py-6 space-y-4">
+                    <a href="index.html"
+                        class="block text-concrete/60 font-mono text-sm py-2 hover:text-safety transition-colors pl-4 uppercase">Home</a>
+                    <a href="book.html"
+                        class="block text-concrete/60 font-mono text-sm py-2 hover:text-safety transition-colors pl-4 uppercase">Profile</a>
+                    <a href="services.html"
+                        class="block text-concrete/60 font-mono text-sm py-2 hover:text-safety transition-colors pl-4 uppercase">Services</a>
+                    <a href="projects.html"
+                        class="block text-concrete/60 font-mono text-sm py-2 hover:text-safety transition-colors pl-4 uppercase">Projects</a>
+                    <a href="staff.html"
+                        class="block text-concrete/60 font-mono text-sm py-2 hover:text-safety transition-colors pl-4 uppercase">Staff</a>
+                    <a href="contact.html"
+                        class="block text-white font-mono text-sm py-2 border-l-4 border-safety bg-safety/5 pl-4 uppercase">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ========== PAGE HEADER ========== -->
+    <section class="relative pt-32 pb-20 overflow-hidden bg-industrial-dark border-b border-safety/20">
+        <div class="absolute inset-0 bg-industrial-dark opacity-90"></div>
+        <div class="absolute inset-0 hero-pattern opacity-20"></div>
+
+        <div class="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="flex flex-col md:flex-row justify-between items-end gap-6">
+                <div>
+                    <div class="flex items-center space-x-3 mb-4">
+                        <div
+                            class="px-2 py-1 border border-safety text-safety text-xs font-mono uppercase tracking-widest bg-safety/10">
+                            COMMS_CHANNEL_01
+                        </div>
+                        <nav aria-label="Breadcrumb">
+                            <ol class="flex items-center space-x-2 text-xs font-mono text-concrete/60">
+                                <li><a href="index.html" class="hover:text-safety transition-colors">HOME</a></li>
+                                <li><span>//</span></li>
+                                <li><span class="text-white uppercase">CONTACT</span></li>
+                            </ol>
+                        </nav>
+                    </div>
+
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-heading font-bold text-white mb-2 leading-tight">
+                        GET IN <span
+                            class="text-transparent bg-clip-text bg-gradient-to-r from-safety to-orange-500">TOUCH</span>
+                    </h1>
+                    <p class="text-concrete/60 font-mono text-sm max-w-xl">
+                        // INITIALIZING COMMUNICATION PROTOCOL...<br>
+                        // READY_FOR_DISCOURSE
+                    </p>
+                </div>
+
+                <div class="text-right hidden md:block">
+                    <div class="text-xs font-mono text-concrete/40 mb-1">SIGNAL STATUS</div>
+                    <div class="flex items-center space-x-2">
+                        <div class="w-2 h-2 bg-safety animate-pulse"></div>
+                        <span class="text-sm font-mono text-white">ENCRYPTED</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== CONTACT CARDS (BENTO LAYOUT) ========== -->
+    <section class="py-16 bg-concrete-light @container">
+        <div class="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-6 gap-6">
+                <!-- Project Inquiries - Large Card -->
+                <div
+                    class="md:col-span-4 lg:col-span-3 contact-card bg-white tech-border p-10 relative overflow-hidden group hover:border-safety transition-all duration-500 @md:p-12">
+                    <div
+                        class="absolute top-4 right-4 font-mono text-[10px] text-industrial-light opacity-30 tracking-widest">
+                        COMMS_LINK_01</div>
+                    <div
+                        class="w-16 h-16 bg-industrial-dark text-safety flex items-center justify-center mb-10 border border-safety/20 group-hover:bg-safety group-hover:text-industrial-dark transition-all duration-500">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                        </svg>
+                    </div>
+                    <div>
+                        <h3 class="text-3xl font-heading font-black text-industrial mb-3 uppercase tracking-tighter">
+                            PROJECT_INQUIRIES</h3>
+                        <p class="text-industrial-light/60 font-mono text-xs mb-8 uppercase tracking-widest">//
+                            DIRECT_ENGINEERING_ACCESS</p>
+                        <a href="mailto:eng.khalil@gaceccon.com"
+                            class="text-2xl font-mono text-safety hover:text-industrial-dark transition-colors break-all underline decoration-safety/30 underline-offset-8">eng.khalil@gaceccon.com</a>
+                    </div>
+                </div>
+
+                <!-- General Email -->
+                <div
+                    class="md:col-span-2 lg:col-span-3 contact-card bg-white tech-border p-10 relative overflow-hidden group hover:border-safety transition-all duration-500">
+                    <div
+                        class="absolute top-4 right-4 font-mono text-[10px] text-industrial-light opacity-30 tracking-widest">
+                        COMMS_LINK_02</div>
+                    <div
+                        class="w-12 h-12 bg-industrial-dark text-safety flex items-center justify-center mb-8 border border-safety/20 group-hover:bg-safety group-hover:text-industrial-dark transition-all duration-500">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-heading font-bold text-industrial mb-2 uppercase tracking-tight">
+                        GENERAL_EMAIL</h3>
+                    <p class="text-industrial-light/60 font-mono text-[10px] mb-6 uppercase tracking-widest">//
+                        RESPONSE_MATRIX: 24h</p>
+                    <a href="mailto:gacec.cons@gmail.com"
+                        class="text-xl font-mono text-safety hover:text-industrial-dark transition-colors break-all underline decoration-safety/30 underline-offset-4">gacec.cons@gmail.com</a>
+                </div>
+
+                <!-- Visit Us -->
+                <div
+                    class="md:col-span-2 lg:col-span-6 contact-card bg-industrial-dark tech-border p-10 relative overflow-hidden group hover:border-safety transition-all duration-500 @md:flex @md:items-center @md:justify-between">
+                    <div class="absolute top-4 right-4 font-mono text-[10px] text-white opacity-20 tracking-widest">
+                        HQ_NODE_03</div>
+                    <div class="flex items-center space-x-8">
+                        <div
+                            class="w-16 h-16 bg-white/5 text-safety flex items-center justify-center border border-safety/20 group-hover:bg-safety group-hover:text-industrial-dark transition-all duration-500">
+                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-heading font-bold text-white mb-2 uppercase tracking-tight">
+                                HEADQUARTERS_LOCATION</h3>
+                            <p class="text-concrete/40 font-mono text-[10px] uppercase tracking-widest">//
+                                MISSION_CONTROL_HUB</p>
+                        </div>
+                    </div>
+                    <div class="mt-8 md:mt-0 text-right">
+                        <p class="text-white font-mono text-lg leading-tight uppercase tracking-tighter">GENEVE STREET,
+                            HAJ ELMI GASSOD BUILDING,<br>DJIBOUTI CITY, REPUBLIC OF DJIBOUTI</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== CONTACT FORM & MAP SECTION ========== -->
+    <section class="py-20 lg:py-32 bg-gray-light">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-12 lg:gap-20">
+                <!-- Contact Form -->
+                <div class="slide-left">
+                    <div
+                        class="inline-flex items-center space-x-2 mb-4 bg-industrial-light/5 px-3 py-1 border border-industrial-light/10">
+                        <span class="w-1.5 h-1.5 bg-safety"></span>
+                        <span
+                            class="text-xs font-mono text-industrial-light uppercase tracking-widest">Inquiry_Input_Field</span>
+                    </div>
+                    <h2 class="text-3xl sm:text-4xl font-heading font-bold text-industrial mb-6">
+                        TRANSMIT PROJECT SPECS
+                    </h2>
+                    <p class="text-industrial-light font-body mb-8">
+                        Secure uplink for project documentation and initial requirements assembly. Our response matrix
+                        averages 24 hours.
+                    </p>
+
+                    <!-- Success Message -->
+                    <div id="success-message"
+                        class="success-message bg-industrial-dark text-safety p-6 border border-safety/30 mb-6">
+                        <div class="flex items-center">
+                            <svg class="w-6 h-6 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                            <span class="font-mono text-sm uppercase tracking-wider">Transmission Successful // Stand by
+                                for uplink confirmation.</span>
+                        </div>
+                    </div>
+
+                    <!-- Contact Form -->
+                    <form id="contact-form" action="https://formspree.io/f/your-form-id" method="POST"
+                        class="space-y-6">
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <label for="name"
+                                    class="block text-xs font-mono font-bold text-industrial-light uppercase mb-2 tracking-widest">Operator
+                                    Name</label>
+                                <input type="text" id="name" name="name" required
+                                    class="w-full px-4 py-3 rounded-none border border-industrial-light/20 bg-white focus:outline-none focus:border-safety font-mono text-sm"
+                                    placeholder="Name_Required">
+                            </div>
+                            <div>
+                                <label for="email"
+                                    class="block text-xs font-mono font-bold text-industrial-light uppercase mb-2 tracking-widest">Uplink
+                                    Email</label>
+                                <input type="email" id="email" name="email" required
+                                    class="w-full px-4 py-3 rounded-none border border-industrial-light/20 bg-white focus:outline-none focus:border-safety font-mono text-sm"
+                                    placeholder="Email_Required">
+                            </div>
+                        </div>
+
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <label for="phone"
+                                    class="block text-xs font-mono font-bold text-industrial-light uppercase mb-2 tracking-widest">Comms
+                                    Number</label>
+                                <input type="tel" id="phone" name="phone"
+                                    class="w-full px-4 py-3 rounded-none border border-industrial-light/20 bg-white focus:outline-none focus:border-safety font-mono text-sm"
+                                    placeholder="+253 XX XX XX XX">
+                            </div>
+                            <div>
+                                <label for="company"
+                                    class="block text-xs font-mono font-bold text-industrial-light uppercase mb-2 tracking-widest">Entity
+                                    Name</label>
+                                <input type="text" id="company" name="company"
+                                    class="w-full px-4 py-3 rounded-none border border-industrial-light/20 bg-white focus:outline-none focus:border-safety font-mono text-sm"
+                                    placeholder="Company/Org">
+                            </div>
+                        </div>
+
+                        <div>
+                            <label for="service"
+                                class="block text-xs font-mono font-bold text-industrial-light uppercase mb-2 tracking-widest">Selected
+                                Capability</label>
+                            <select id="service" name="service" required
+                                class="w-full px-4 py-3 rounded-none border border-industrial-light/20 bg-white focus:outline-none focus:border-safety font-mono text-sm">
+                                <option value="">Select_Protocol</option>
+                                <option value="building">Building Construction</option>
+                                <option value="roads">Road & Infrastructure</option>
+                                <option value="water">Water & Sewage</option>
+                                <option value="metal">Metal/Iron Structures</option>
+                                <option value="hangars">Hangars/Warehouses</option>
+                                <option value="mosque">Mosque/Religious</option>
+                                <option value="foundations">Foundations</option>
+                                <option value="design">Design & Studies</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label for="message"
+                                class="block text-xs font-mono font-bold text-industrial-light uppercase mb-2 tracking-widest">Transmission
+                                Loadout</label>
+                            <textarea id="message" name="message" rows="5" required
+                                class="w-full px-4 py-3 rounded-none border border-industrial-light/20 bg-white focus:outline-none focus:border-safety font-mono text-sm resize-none"
+                                placeholder="Detail project specifications..."></textarea>
+                        </div>
+
+                        <div class="flex items-start">
+                            <input type="checkbox" id="privacy" name="privacy" required
+                                class="mt-1 w-4 h-4 text-safety border-industrial-light/20 rounded-none focus:ring-safety">
+                            <label for="privacy"
+                                class="ml-3 text-[10px] font-mono text-industrial-light uppercase tracking-tight">
+                                Confirm <a href="#" class="text-safety hover:underline">Privacy_Protocol</a> and data
+                                usage terms.
+                            </label>
+                        </div>
+
+                        <button type="submit"
+                            class="w-full bg-industrial text-white hover:bg-safety px-8 py-4 font-heading font-bold text-lg inline-flex items-center justify-center group clip-path-slant transition-colors">
+                            INITIATE TRANSMISSION
+                            <svg class="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none"
+                                stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                            </svg>
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Map & Info -->
+                <div class="slide-right">
+                    <div class="bg-white tech-border overflow-hidden h-full">
+                        <!-- Map -->
+                        <div class="h-80 bg-concrete border-b border-industrial-light/10">
+                            <iframe src="https://maps.google.com/maps?q=Djibouti&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                                width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade" title="GACEC Headquarters Location">
+                            </iframe>
+                        </div>
+
+                        <!-- Office Info -->
+                        <div class="p-8">
+                            <h3 class="text-xl font-heading font-bold text-industrial mb-6 uppercase tracking-tight">
+                                Deployment Hub</h3>
+
+                            <div class="space-y-4">
+                                <div class="flex items-start space-x-4">
+                                    <div
+                                        class="w-10 h-10 bg-industrial-dark text-safety flex items-center justify-center flex-shrink-0 border border-safety/20">
+                                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <p
+                                            class="font-mono text-xs font-bold text-industrial-light uppercase tracking-widest">
+                                            Geo_Coordinates</p>
+                                        <p class="text-industrial font-mono text-sm">GENEVE STREET, HAJ ELMI GASSOD
+                                            BUILDING, DJIBOUTI</p>
+                                    </div>
+                                </div>
+
+                                <div class="flex items-start space-x-4">
+                                    <div
+                                        class="w-10 h-10 bg-industrial-dark text-safety flex items-center justify-center flex-shrink-0 border border-safety/20">
+                                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <p
+                                            class="font-mono text-xs font-bold text-industrial-light uppercase tracking-widest">
+                                            Operational_Hours</p>
+                                        <p class="text-industrial font-mono text-sm">MON-FRI: 0800 - 1800<br>SAT: 0900 -
+                                            1400</p>
+                                    </div>
+                                </div>
+
+                                <div class="flex items-start space-x-4">
+                                    <div
+                                        class="w-10 h-10 bg-industrial-dark text-safety flex items-center justify-center flex-shrink-0 border border-safety/20">
+                                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <p
+                                            class="font-mono text-xs font-bold text-industrial-light uppercase tracking-widest">
+                                            Comms_Channels</p>
+                                        <p class="text-industrial font-mono text-sm">
+                                            ENG: <a href="mailto:eng.khalil@gaceccon.com"
+                                                class="text-safety hover:underline">eng.khalil@gaceccon.com</a><br>
+                                            OPS: <a href="mailto:gacec.cons@gmail.com"
+                                                class="text-safety hover:underline">gacec.cons@gmail.com</a>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== REGIONAL OFFICES (BENTO) ========== -->
+    <section class="py-20 lg:py-32 bg-white @container">
+        <div class="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Header Card -->
+                <div
+                    class="md:col-span-2 bg-concrete-light p-10 tech-border border-l-4 border-industrial flex flex-col justify-center">
+                    <div
+                        class="inline-flex items-center space-x-2 mb-6 bg-industrial/5 px-3 py-1 border border-industrial/10 w-fit">
+                        <span class="w-1.5 h-1.5 bg-safety"></span>
+                        <span class="text-xs font-mono text-industrial uppercase tracking-widest">Global_Presence</span>
+                    </div>
+                    <h2 class="text-4xl font-heading font-black text-industrial mb-6 uppercase tracking-tighter">
+                        OPERATIONAL <span class="text-safety">NODES</span></h2>
+                    <p class="text-industrial-light/70 text-lg font-light leading-relaxed max-w-xl">
+                        Centralized infrastructure management with localized execution capability throughout the
+                        Djibouti metropolitan area and regional corridors.
+                    </p>
+                </div>
+
+                <!-- Office Node 1 -->
+                <div
+                    class="md:col-span-1 bg-industrial-dark p-8 tech-border group hover:border-safety transition-all duration-500">
+                    <div
+                        class="w-12 h-12 bg-white/5 text-safety flex items-center justify-center mb-6 border border-safety/20 group-hover:bg-safety group-hover:text-industrial-dark transition-all">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                        </svg>
+                    </div>
+                    <h3
+                        class="text-xl font-heading font-bold text-white mb-2 uppercase tracking-tight group-hover:text-safety transition-colors">
+                        Djibouti HQ</h3>
+                    <p class="text-concrete/40 font-mono text-[10px] mb-6 uppercase tracking-widest">// HUB_ALPHA</p>
+                    <p class="text-concrete/60 font-mono text-xs mb-6 leading-tight uppercase">GENEVE STREET, HAJ ELMI
+                        GASSOD BUILDING</p>
+                    <a href="mailto:gacec.cons@gmail.com"
+                        class="text-safety hover:text-white font-mono text-sm underline decoration-safety/30 underline-offset-4 tracking-tighter">gacec.cons@gmail.com</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== FAQ SECTION ========== -->
+    <section class="py-20 lg:py-32 bg-industrial-dark relative overflow-hidden">
+        <div class="absolute inset-0 hero-pattern opacity-5"></div>
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-16 fade-in">
+                <div class="inline-flex items-center space-x-2 mb-4 bg-safety/10 px-3 py-1 border border-safety/20">
+                    <span class="w-1.5 h-1.5 bg-safety"></span>
+                    <span class="text-xs font-mono text-safety uppercase tracking-widest">Inquiry_Database</span>
+                </div>
+                <h2
+                    class="text-3xl sm:text-4xl lg:text-5xl font-heading font-bold text-white mb-6 uppercase tracking-tight">
+                    FREQUENTLY ASKED <span class="text-safety">QUESTIONS</span>
+                </h2>
+            </div>
+
+            <div class="space-y-4">
+                <!-- FAQ Item 1 -->
+                <div
+                    class="bg-industrial-light/10 border border-industrial-light/20 overflow-hidden fade-in hover:border-safety/30 transition-colors">
+                    <button class="faq-btn w-full px-6 py-5 text-left flex items-center justify-between group"
+                        aria-expanded="false">
+                        <span
+                            class="font-heading font-bold text-white uppercase tracking-tight group-hover:text-safety transition-colors">01_
+                            PROJECT SCOPE CAPABILITIES</span>
+                        <svg class="faq-icon w-5 h-5 text-safety transition-transform" fill="none" stroke="currentColor"
+                            viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6">
+                        <p
+                            class="text-concrete/60 font-body text-sm leading-relaxed border-l-2 border-safety/30 pl-4 py-1">
+                            We execute complex infrastructures including commercial/residential high-rises, logistics
+                            hubs, road networks, and hydraulic systems. Our execution matrix spans from localized
+                            developments to $500M+ international-scale projects.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 2 -->
+                <div
+                    class="bg-industrial-light/10 border border-industrial-light/20 overflow-hidden fade-in hover:border-safety/30 transition-colors">
+                    <button class="faq-btn w-full px-6 py-5 text-left flex items-center justify-between group"
+                        aria-expanded="false">
+                        <span
+                            class="font-heading font-bold text-white uppercase tracking-tight group-hover:text-safety transition-colors">02_
+                            OPERATIONAL TERRITORY</span>
+                        <svg class="faq-icon w-5 h-5 text-safety transition-transform" fill="none" stroke="currentColor"
+                            viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6">
+                        <p
+                            class="text-concrete/60 font-body text-sm leading-relaxed border-l-2 border-safety/30 pl-4 py-1">
+                            Primary operations are centralized in Djibouti. We utilize a localized deployment strategy
+                            to maintain high-quality oversight and efficient logistical throughput within the Horn of
+                            Africa region.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 3 -->
+                <div
+                    class="bg-industrial-light/10 border border-industrial-light/20 overflow-hidden fade-in hover:border-safety/30 transition-colors">
+                    <button class="faq-btn w-full px-6 py-5 text-left flex items-center justify-between group"
+                        aria-expanded="false">
+                        <span
+                            class="font-heading font-bold text-white uppercase tracking-tight group-hover:text-safety transition-colors">03_
+                            QUOTATION PROTOCOL</span>
+                        <svg class="faq-icon w-5 h-5 text-safety transition-transform" fill="none" stroke="currentColor"
+                            viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6">
+                        <p
+                            class="text-concrete/60 font-body text-sm leading-relaxed border-l-2 border-safety/30 pl-4 py-1">
+                            Initiate via direct uplink using the contact form or eng.khalil@gaceccon.com. Required data:
+                            Project scope, geolocation, timeline parameters, and budgetary alignment.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 4 -->
+                <div
+                    class="bg-industrial-light/10 border border-industrial-light/20 overflow-hidden fade-in hover:border-safety/30 transition-colors">
+                    <button class="faq-btn w-full px-6 py-5 text-left flex items-center justify-between group"
+                        aria-expanded="false">
+                        <span
+                            class="font-heading font-bold text-white uppercase tracking-tight group-hover:text-safety transition-colors">04_
+                            COMPLIANCE & STANDARDS</span>
+                        <svg class="faq-icon w-5 h-5 text-safety transition-transform" fill="none" stroke="currentColor"
+                            viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6">
+                        <p
+                            class="text-concrete/60 font-body text-sm leading-relaxed border-l-2 border-safety/30 pl-4 py-1">
+                            Operating under ISO 9001 (Quality), ISO 14001 (Environment), and OHSAS 18001 (Safety). All
+                            deployments adhere to international building codes and specialized LEED criteria where
+                            applicable.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="bg-industrial-dark text-white pt-20 pb-8 border-t border-industrial-light/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+                <div>
+                    <a href="index.html" class="flex items-center space-x-3 mb-6">
+                        <div
+                            class="w-10 h-10 bg-safety flex items-center justify-center font-heading font-black text-industrial-dark italic">
+                            G</div>
+                        <div><span class="font-heading font-bold text-xl tracking-tight">GACEC<span
+                                    class="text-safety">.</span>CON</span></div>
+                    </a>
+                    <p class="text-concrete/40 font-mono text-xs mb-6 leading-relaxed">
+                        // GLOBAL_AFRICAN_COMPANY_ENGINEERING_CONSTRUCTION<br>
+                        // SECTOR: INFRASTRUCTURE_DEVELOPMENT<br>
+                        // EST: 2004_DJIBOUTI
+                    </p>
+                </div>
+
+                <div>
+                    <h3 class="font-heading font-bold text-sm mb-6 uppercase tracking-widest text-safety">Network_Nodes
+                    </h3>
+                    <ul class="space-y-4 font-mono text-xs text-concrete/60">
+                        <li><a href="book.html" class="hover:text-safety transition-colors uppercase italic">// 01_
+                                Profile</a></li>
+                        <li><a href="services.html" class="hover:text-safety transition-colors uppercase italic">// 02_
+                                Services</a></li>
+                        <li><a href="projects.html" class="hover:text-safety transition-colors uppercase italic">// 03_
+                                Projects</a></li>
+                        <li><a href="staff.html" class="hover:text-safety transition-colors uppercase italic">// 04_
+                                Resources</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="font-heading font-bold text-sm mb-6 uppercase tracking-widest text-safety">
+                        System_Capacities</h3>
+                    <ul class="space-y-4 font-mono text-xs text-concrete/60">
+                        <li><span class="uppercase">Building_Construction</span></li>
+                        <li><span class="uppercase">Road_Infrastructure</span></li>
+                        <li><span class="uppercase">Water_Hydraulics</span></li>
+                        <li><span class="uppercase">Design_Studies</span></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="font-heading font-bold text-sm mb-6 uppercase tracking-widest text-safety">Uplink_Direct
+                    </h3>
+                    <ul class="space-y-4 font-mono text-xs text-concrete/60">
+                        <li class="flex items-start space-x-3">
+                            <span class="text-safety font-bold">HQ:</span>
+                            <span>GENEVE STREET, DJIBOUTI</span>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <span class="text-safety font-bold">EML:</span>
+                            <a href="mailto:eng.khalil@gaceccon.com"
+                                class="hover:text-safety transition-colors">eng.khalil@gaceccon.com</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div
+                class="border-t border-industrial-light/10 pt-8 flex flex-col md:flex-row justify-between items-center bg-industrial-dark">
+                <p class="text-concrete/20 font-mono text-[10px] tracking-widest uppercase mb-4 md:mb-0">
+                    &copy; 2026 GACEC_CON // ALL_RIGHTS_RESERVED // SYSTEM_VERSION_3.0.4
+                </p>
+                <div class="flex space-x-6">
+                    <a href="#"
+                        class="text-concrete/40 hover:text-safety font-mono text-[10px] uppercase transition-colors tracking-tighter">Privacy_Protocol</a>
+                    <a href="#"
+                        class="text-concrete/40 hover:text-safety font-mono text-[10px] uppercase transition-colors tracking-tighter">Access_Terms</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top -->
+    <button id="back-to-top"
+        class="fixed bottom-8 right-8 w-12 h-12 bg-industrial border border-safety/30 text-safety flex items-center justify-center opacity-0 invisible transition-all hover:bg-safety hover:text-industrial-dark z-50 tech-border"
+        aria-label="Back to top">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 10l7-7m0 0l7 7m-7-7v18" />
+        </svg>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

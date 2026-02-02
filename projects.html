@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Explore GACECCon's portfolio of construction projects in Djibouti - buildings, commercial centers, infrastructure, and more.">
+    <meta name="keywords"
+        content="construction projects Djibouti, building projects, infrastructure development, GACECCon portfolio">
+    <meta name="author" content="GACECCon">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://gaceccon.com/projects.html">
+
+    <title>Our Projects | GACECCon - Engineering Excellence in Djibouti</title>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        /* OKLCH - Professional Patterns */
+                        primary: 'oklch(0.65 0.25 35)',
+                        surface: 'oklch(0.25 0.03 260)',
+                        'on-surface': 'oklch(0.98 0.01 240)',
+
+                        industrial: {
+                            DEFAULT: '#1a1f2c',
+                            light: '#334155',
+                            dark: '#0f172a'
+                        },
+                        safety: {
+                            DEFAULT: '#ff4d00',
+                            vivid: '#ff3d00'
+                        },
+                        concrete: {
+                            light: '#f8fafc',
+                            DEFAULT: '#f3f4f6',
+                            dark: '#e2e8f0'
+                        }
+                    },
+                    fontFamily: {
+                        heading: ['"Chakra Petch"', 'sans-serif'],
+                        body: ['"Inter"', 'sans-serif'],
+                        mono: ['"JetBrains Mono"', 'monospace']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;500;600;700&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/theme.css">
+
+    <style>
+        .hero-pattern {
+            background-color: var(--color-industrial-slate);
+            background-image:
+                linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+            background-size: 50px 50px;
+        }
+
+        /* Custom scrollbar for modal */
+        .modal-scroll::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        .modal-scroll::-webkit-scrollbar-track {
+            background: #1a1f2c;
+        }
+
+        .modal-scroll::-webkit-scrollbar-thumb {
+            background: #ff4d00;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+
+<body class="bg-concrete-light">
+    <!-- ========== NAVIGATION ========== -->
+    <nav id="navbar"
+        class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-industrial-dark/95 border-b border-white/5 backdrop-blur-sm">
+        <div class="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Logo -->
+                <a href="index.html" class="flex items-center space-x-3 group">
+                    <img src="images/logo24.png" alt="GACEC Logo"
+                        class="nav-logo-img w-10 h-10 object-contain grayscale group-hover:grayscale-0 transition-all duration-500">
+                    <div>
+                        <span
+                            class="text-white font-heading font-bold text-xl tracking-tight leading-none block">GACEC<span
+                                class="text-safety">.</span></span>
+                        <span
+                            class="hidden sm:block text-concrete-light/60 text-[10px] font-mono tracking-widest uppercase">Ind.
+                            Eng. Systems</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Menu -->
+                <div class="hidden lg:flex items-center space-x-8">
+                    <a href="index.html"
+                        class="text-concrete font-mono text-sm hover:text-safety transition-colors relative group">
+                        <span
+                            class="text-safety/50 mr-1 opacity-0 group-hover:opacity-100 transition-opacity">//</span>HOME
+                    </a>
+                    <a href="book.html"
+                        class="text-concrete font-mono text-sm hover:text-safety transition-colors relative group">
+                        <span
+                            class="text-safety/50 mr-1 opacity-0 group-hover:opacity-100 transition-opacity">//</span>PROFILE
+                    </a>
+                    <a href="services.html"
+                        class="text-concrete font-mono text-sm hover:text-safety transition-colors relative group">
+                        <span
+                            class="text-safety/50 mr-1 opacity-0 group-hover:opacity-100 transition-opacity">//</span>CAPABILITIES
+                    </a>
+                    <a href="projects.html"
+                        class="text-white font-mono text-sm hover:text-safety transition-colors relative group">
+                        <span class="text-safety/50 mr-1">//</span>PROJECTS
+                    </a>
+                    <a href="staff.html"
+                        class="text-concrete font-mono text-sm hover:text-safety transition-colors relative group">
+                        <span
+                            class="text-safety/50 mr-1 opacity-0 group-hover:opacity-100 transition-opacity">//</span>RESOURCES
+                    </a>
+
+                    <button id="admin-access-btn" class="text-concrete hover:text-safety transition-colors">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+                        </svg>
+                    </button>
+
+                    <a href="contact.html" class="btn-industrial text-sm px-6 py-2">
+                        INITIATE
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="lg:hidden text-white p-2 hover:text-safety transition-colors"
+                    aria-label="Toggle mobile menu">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path id="menu-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="mobile-menu lg:hidden bg-industrial-dark border-b border-industrial-light">
+                <div class="px-4 py-6 space-y-4">
+                    <a href="index.html"
+                        class="block text-concrete font-mono text-sm hover:text-safety pl-4 py-2 border-l-2 border-transparent hover:border-safety transition-all">01
+                        // HOME</a>
+                    <a href="book.html"
+                        class="block text-concrete font-mono text-sm hover:text-safety pl-4 py-2 border-l-2 border-transparent hover:border-safety transition-all">02
+                        // PROFILE</a>
+                    <a href="services.html"
+                        class="block text-concrete font-mono text-sm hover:text-safety pl-4 py-2 border-l-2 border-transparent hover:border-safety transition-all">03
+                        // CAPABILITIES</a>
+                    <a href="projects.html"
+                        class="block text-white font-mono text-sm border-l-2 border-safety pl-4 bg-white/5 py-2">04 //
+                        PROJECTS</a>
+                    <a href="staff.html"
+                        class="block text-concrete font-mono text-sm hover:text-safety pl-4 py-2 border-l-2 border-transparent hover:border-safety transition-all">05
+                        // RESOURCES</a>
+                    <button id="admin-access-btn-mobile"
+                        class="block text-concrete font-mono text-sm hover:text-safety pl-4 py-2 border-l-2 border-transparent hover:border-safety transition-all w-full text-left">
+                        ADMIN ACCESS
+                    </button>
+                    <a href="contact.html"
+                        class="block bg-safety text-white text-center py-3 font-heading font-bold uppercase mt-4 clip-path-slant hover:bg-white hover:text-industrial transition-colors">
+                        INITIATE PROTOCOL
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ========== PAGE HEADER ========== -->
+    <section class="relative pt-32 pb-20 overflow-hidden bg-industrial-dark border-b border-safety/20">
+        <div class="absolute inset-0 bg-industrial-dark opacity-90"></div>
+        <div class="absolute inset-0 hero-pattern opacity-20"></div>
+
+        <div class="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="flex flex-col md:flex-row justify-between items-end gap-6">
+                <div>
+                    <div class="flex items-center space-x-3 mb-4">
+                        <div
+                            class="px-2 py-1 border border-safety text-safety text-xs font-mono uppercase tracking-widest bg-safety/10">
+                            Archived_Logs.db
+                        </div>
+                        <nav aria-label="Breadcrumb">
+                            <ol class="flex items-center space-x-2 text-xs font-mono text-concrete/60">
+                                <li><a href="index.html" class="hover:text-safety transition-colors">HOME</a></li>
+                                <li><span>//</span></li>
+                                <li><span class="text-white">PROJECTS</span></li>
+                            </ol>
+                        </nav>
+                    </div>
+
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-heading font-bold text-white mb-2 leading-tight">
+                        PROJECT <span
+                            class="text-transparent bg-clip-text bg-gradient-to-r from-safety to-orange-500">ARCHIVES</span>
+                    </h1>
+                    <p class="text-concrete/60 font-mono text-sm max-w-xl">
+                        // ACCESSING DATABASE...<br>
+                        // TOTAL_RECORDS: <span id="projects-count" class="text-white">--</span>_ENTRIES
+                    </p>
+                </div>
+
+                <div class="text-right hidden md:block">
+                    <div class="text-xs font-mono text-concrete/40 mb-1">SYSTEM STATUS</div>
+                    <div class="flex items-center space-x-2">
+                        <div class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
+                        <span class="text-sm font-mono text-white">ONLINE</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== PROJECTS SECTION ========== -->
+    <section class="py-20 lg:py-32 bg-gray-light">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Filter Buttons (Technical Tags) -->
+            <div class="flex flex-wrap justify-center gap-2 mb-12 fade-in">
+                <button
+                    class="filter-btn active px-5 py-2 border border-safety bg-safety/10 text-safety font-mono text-[10px] uppercase tracking-widest hover:bg-safety hover:text-white transition-all"
+                    data-filter="all">
+                    // ALL_DATA
+                </button>
+                <button
+                    class="filter-btn px-5 py-2 border border-industrial-light text-industrial-light font-mono text-[10px] uppercase tracking-widest hover:border-safety hover:text-safety transition-all"
+                    data-filter="Buildings">
+                    Buildings
+                </button>
+                <button
+                    class="filter-btn px-5 py-2 border border-industrial-light text-industrial-light font-mono text-[10px] uppercase tracking-widest hover:border-safety hover:text-safety transition-all"
+                    data-filter="Commercial">
+                    Commercial
+                </button>
+                <button
+                    class="filter-btn px-5 py-2 border border-industrial-light text-industrial-light font-mono text-[10px] uppercase tracking-widest hover:border-safety hover:text-safety transition-all"
+                    data-filter="Residential">
+                    Residential
+                </button>
+                <button
+                    class="filter-btn px-5 py-2 border border-industrial-light text-industrial-light font-mono text-[10px] uppercase tracking-widest hover:border-safety hover:text-safety transition-all"
+                    data-filter="Industrial">
+                    Industrial
+                </button>
+                <button
+                    class="filter-btn px-5 py-2 border border-industrial-light text-industrial-light font-mono text-[10px] uppercase tracking-widest hover:border-safety hover:text-safety transition-all"
+                    data-filter="Infrastructure">
+                    Infrastructure
+                </button>
+                <button
+                    class="filter-btn px-5 py-2 border border-industrial-light text-industrial-light font-mono text-[10px] uppercase tracking-widest hover:border-safety hover:text-safety transition-all"
+                    data-filter="Religious">
+                    Religious
+                </button>
+            </div>
+
+            <!-- Projects Count -->
+            <div class="mb-8 flex items-center justify-between border-b border-industrial-light/10 pb-4">
+                <div
+                    class="flex items-center space-x-2 text-[10px] font-mono text-industrial-light uppercase tracking-widest">
+                    <span class="w-2 h-2 bg-safety"></span>
+                    <span>Query_Results</span>
+                </div>
+                <p class="font-mono text-[10px] text-industrial-light uppercase tracking-widest">
+                    Showing <span id="projects-count" class="font-bold text-industrial">0</span>_Records
+                </p>
+            </div>
+
+            <!-- Projects Grid -->
+            <div id="projects-grid" class="projects-grid">
+                <!-- Projects loaded dynamically -->
+            </div>
+
+            <!-- No Results Message -->
+            <div id="no-results" class="hidden text-center py-16">
+                <svg class="w-24 h-24 mx-auto text-gray-300 mb-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1"
+                        d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <h3 class="text-2xl font-heading font-bold text-navy mb-2">No Projects Found</h3>
+                <p class="text-gray-warm">No projects match the selected category. Try a different filter.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== PROJECT MODAL ========== -->
+    <div id="project-modal" class="fixed inset-0 z-[100] hidden">
+        <div class="absolute inset-0 bg-industrial-dark/90 backdrop-blur-sm transition-opacity" id="modal-backdrop">
+        </div>
+
+        <div class="absolute inset-0 overflow-y-auto modal-scroll">
+            <div class="flex min-h-full items-center justify-center p-4">
+                <div
+                    class="relative w-full max-w-5xl bg-concrete-light tech-border shadow-2xl overflow-hidden transform transition-all">
+
+                    <!-- Header -->
+                    <div class="flex justify-between items-center p-4 sm:p-6 bg-white border-b border-concrete-dark/10">
+                        <div class="flex items-center space-x-3">
+                            <span id="modal-year-badge"
+                                class="bg-industrial text-white px-3 py-1 font-mono text-xs">2023</span>
+                            <div class="h-6 w-px bg-concrete-dark/20"></div>
+                            <span id="modal-category-text"
+                                class="text-safety font-mono text-xs uppercase tracking-wider">Category</span>
+                        </div>
+                        <button id="modal-close" class="text-concrete-dark hover:text-safety transition-colors">
+                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M6 18L18 6M6 6l12 12" />
+                            </svg>
+                        </button>
+                    </div>
+
+                    <div class="p-6 sm:p-10 grid gap-8 lg:grid-cols-12">
+                        <!-- Left: Images -->
+                        <div class="lg:col-span-7 space-y-4">
+                            <div class="aspect-video relative bg-industrial-dark overflow-hidden group tech-border">
+                                <img id="modal-main-image" src="" alt="" class="w-full h-full object-cover">
+                                <div id="modal-status"
+                                    class="absolute top-4 left-4 font-mono text-xs bg-safety text-white px-3 py-1 uppercase">
+                                </div>
+                            </div>
+                            <div id="modal-thumbnails" class="grid grid-cols-4 gap-4">
+                                <!-- Thumbnails loaded dynamically -->
+                            </div>
+                        </div>
+
+                        <!-- Right: Details -->
+                        <div class="lg:col-span-5 space-y-8">
+                            <div>
+                                <h2 id="modal-title"
+                                    class="text-2xl sm:text-3xl font-heading font-bold text-industrial mb-4"></h2>
+                                <p id="modal-description" class="text-industrial-light leading-relaxed mb-6"></p>
+
+                                <div class="space-y-4 border-t border-dashed border-concrete-dark/20 pt-6">
+                                    <div class="grid grid-cols-2 gap-4">
+                                        <div>
+                                            <div class="font-mono text-[10px] text-concrete-dark uppercase mb-1">Client
+                                            </div>
+                                            <div id="modal-client" class="text-sm font-semibold text-industrial"></div>
+                                        </div>
+                                        <div>
+                                            <div class="font-mono text-[10px] text-concrete-dark uppercase mb-1">
+                                                Location</div>
+                                            <div id="modal-location" class="text-sm font-semibold text-industrial">
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <div class="font-mono text-[10px] text-concrete-dark uppercase mb-1">Year
+                                            </div>
+                                            <div id="modal-year" class="text-sm font-semibold text-industrial"></div>
+                                        </div>
+                                        <div>
+                                            <div class="font-mono text-[10px] text-concrete-dark uppercase mb-1">Type
+                                            </div>
+                                            <div id="modal-type" class="text-sm font-semibold text-industrial"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Tabs (Simulated) -->
+                            <div>
+                                <div class="flex border-b border-concrete-dark/20 mb-4">
+                                    <div
+                                        class="pb-2 border-b-2 border-safety text-industrial font-heading font-bold text-sm uppercase px-4">
+                                        Tech Specs</div>
+                                    <div
+                                        class="pb-2 text-concrete-dark font-heading font-bold text-sm uppercase px-4 cursor-not-allowed opacity-50">
+                                        Logistics</div>
+                                </div>
+                                <div class="space-y-4">
+                                    <div>
+                                        <h4 class="font-mono text-xs font-bold text-industrial uppercase mb-2">Scope of
+                                            Work</h4>
+                                        <ul id="modal-tasks" class="space-y-2"></ul>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-mono text-xs font-bold text-industrial uppercase mb-2">Key
+                                            Requirements</h4>
+                                        <ul id="modal-requirements" class="space-y-2"></ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div
+                        class="bg-gray-50 px-6 py-4 flex justify-between items-center border-t border-concrete-dark/10">
+                        <span class="font-mono text-xs text-concrete-dark">End of Record</span>
+                        <button id="modal-close-btn"
+                            class="bg-industrial-dark text-white hover:bg-black px-6 py-2 font-mono text-xs uppercase tracking-wider transition-colors">
+                            Close File
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========== CTA SECTION (BENTO LAYOUT) ========== -->
+    <section
+        class="py-20 lg:py-32 bg-industrial relative overflow-hidden text-white border-t border-white/5 @container">
+        <!-- Background Pattern -->
+        <div class="absolute inset-0 opacity-10">
+            <svg class="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
+                <defs>
+                    <pattern id="diagonal-cta" width="10" height="10" patternUnits="userSpaceOnUse">
+                        <path d="M 0 10 L 10 0" fill="none" stroke="white" stroke-width="0.5" />
+                    </pattern>
+                </defs>
+                <rect width="100" height="100" fill="url(#diagonal-cta)" />
+            </svg>
+        </div>
+
+        <div class="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+                <!-- Main Header Card -->
+                <div
+                    class="md:col-span-4 lg:col-span-2 bg-white/5 backdrop-blur-md p-10 tech-border border-l-4 border-safety">
+                    <span
+                        class="inline-block text-safety font-mono text-[10px] tracking-widest uppercase mb-4 px-2 py-0.5 bg-safety/10 border border-safety/20">
+                        // PROJECT_REQUISITION_v4.0
+                    </span>
+                    <h2
+                        class="text-3xl sm:text-4xl lg:text-5xl font-heading font-bold text-white mb-6 uppercase tracking-tight leading-tight">
+                        HAVE A <span class="text-safety">PROJECT</span> <br>IN MIND?
+                    </h2>
+                    <p class="text-concrete/60 text-lg leading-relaxed font-light mb-8 max-w-md">
+                        Let's discuss how GACEC can bring your vision to life. Our unit is prepared for rapid deployment
+                        and precision execution.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="contact.html"
+                            class="bg-safety text-industrial-dark hover:bg-white hover:text-industrial px-8 py-4 font-heading font-black text-lg inline-flex items-center justify-center transition-all group clip-path-slant shadow-lg shadow-safety/20">
+                            INITIATE PROTOCOL
+                            <svg class="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none"
+                                stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
+                                    d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Capabilities Mini Card -->
+                <div
+                    class="md:col-span-2 lg:col-span-1 bg-white/5 backdrop-blur-sm p-8 tech-border group hover:border-safety/30 transition-all duration-500 flex flex-col justify-between">
+                    <div>
+                        <div class="text-safety font-mono text-[10px] mb-4 opacity-50">// DATA_QUERY</div>
+                        <h3 class="text-xl font-heading font-bold text-white mb-3 uppercase tracking-tighter">
+                            Browse_Registry</h3>
+                        <p class="text-concrete/40 text-sm mb-6">Explore our full range of technical capabilities and
+                            industrial services.</p>
+                    </div>
+                    <a href="services.html"
+                        class="text-white hover:text-safety font-mono text-xs uppercase tracking-widest flex items-center group-hover:pl-2 transition-all">
+                        <span class="mr-2 text-safety/50">>></span> View Capabilities
+                    </a>
+                </div>
+
+                <!-- Contact Info Mini Card -->
+                <div
+                    class="md:col-span-2 lg:col-span-1 bg-white/5 backdrop-blur-sm p-8 tech-border group hover:border-safety/30 transition-all duration-500 flex flex-col justify-between">
+                    <div>
+                        <div class="text-safety font-mono text-[10px] mb-4 opacity-50">// DIRECT_UPLINK</div>
+                        <h3 class="text-xl font-heading font-bold text-white mb-3 uppercase tracking-tighter">
+                            Direct_Comms</h3>
+                        <p class="text-concrete/40 text-sm mb-6">Connect directly with our engineering triage for
+                            mission-critical inquiries.</p>
+                    </div>
+                    <div class="space-y-2">
+                        <span
+                            class="block text-concrete/60 font-mono text-[11px] uppercase tracking-tighter">Engineering_Lead:</span>
+                        <a href="mailto:eng.khalil@gaceccon.com"
+                            class="text-safety hover:text-white font-mono text-xs break-all transition-colors underline decoration-safety/30 underline-offset-4">eng.khalil@gaceccon.com</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="bg-industrial-dark text-concrete pt-20 pb-8 border-t border-industrial-light">
+        <div class="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+                <!-- Brand -->
+                <div>
+                    <a href="index.html" class="flex items-center space-x-3 mb-6">
+                        <img src="images/logo24.png" alt="GACEC Logo"
+                            class="w-10 h-10 object-contain grayscale opacity-80">
+                        <div><span class="font-heading font-bold text-xl text-white tracking-tight">GACEC<span
+                                    class="text-safety">.</span></span></div>
+                    </a>
+                    <p class="text-concrete/60 mb-6 leading-relaxed font-mono text-sm">
+                        Global African Company for Engineering and Construction.<br>
+                        Deploying advanced infrastructure since 2004.
+                    </p>
+                    <!-- Socials - styled as system connectors -->
+                    <div class="flex space-x-4">
+                        <a href="#"
+                            class="w-10 h-10 border border-industrial-light flex items-center justify-center text-concrete/60 hover:text-safety hover:border-safety transition-all"
+                            aria-label="LinkedIn">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                            </svg>
+                        </a>
+                        <a href="#"
+                            class="w-10 h-10 border border-industrial-light flex items-center justify-center text-concrete/60 hover:text-safety hover:border-safety transition-all"
+                            aria-label="Facebook">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- System Links -->
+                <div>
+                    <h3
+                        class="font-mono text-safety text-xs uppercase tracking-widest mb-6 border-l-2 border-safety pl-2">
+                        System Navigation</h3>
+                    <ul class="space-y-3 font-mono text-sm">
+                        <li><a href="book.html"
+                                class="text-concrete/60 hover:text-white transition-colors hover:pl-2 duration-300">>>
+                                GACEC Profile</a></li>
+                        <li><a href="services.html"
+                                class="text-concrete/60 hover:text-white transition-colors hover:pl-2 duration-300">>>
+                                Capabilities</a></li>
+                        <li><a href="projects.html"
+                                class="text-concrete/60 hover:text-white transition-colors hover:pl-2 duration-300">>>
+                                Project Logs</a></li>
+                        <li><a href="staff.html"
+                                class="text-concrete/60 hover:text-white transition-colors hover:pl-2 duration-300">>>
+                                Resources</a></li>
+                    </ul>
+                </div>
+
+                <!-- Capabilities -->
+                <div>
+                    <h3
+                        class="font-mono text-safety text-xs uppercase tracking-widest mb-6 border-l-2 border-safety pl-2">
+                        Capabilities</h3>
+                    <ul class="space-y-3 font-mono text-sm">
+                        <li><a href="services.html#building-construction"
+                                class="text-concrete/60 hover:text-white transition-colors">Building Construction</a>
+                        </li>
+                        <li><a href="services.html#road-infrastructure"
+                                class="text-concrete/60 hover:text-white transition-colors">Infrastructure</a></li>
+                        <li><a href="services.html#water-sewage"
+                                class="text-concrete/60 hover:text-white transition-colors">Water Systems</a></li>
+                        <li><a href="services.html#metal-structures"
+                                class="text-concrete/60 hover:text-white transition-colors">Steel Structures</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Data -->
+                <div>
+                    <h3
+                        class="font-mono text-safety text-xs uppercase tracking-widest mb-6 border-l-2 border-safety pl-2">
+                        Comms Channels</h3>
+                    <ul class="space-y-4 font-mono text-sm leading-relaxed text-concrete/60">
+                        <li class="flex items-start space-x-3">
+                            <span class="text-safety">[LOC]</span>
+                            <span>Geneve St, Haj Elmi Gassod Bldg<br>Djibouti, Repub. of Djibouti</span>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <span class="text-safety">[EMA]</span>
+                            <a href="mailto:eng.khalil@gaceccon.com"
+                                class="hover:text-white transition-colors">eng.khalil@gaceccon.com</a>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <span class="text-safety">[ALT]</span>
+                            <a href="mailto:gacec.cons@gmail.com"
+                                class="hover:text-white transition-colors">gacec.cons@gmail.com</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div
+                class="border-t border-white/5 pt-8 flex flex-col md:flex-row justify-between items-center opacity-60 text-xs font-mono">
+                <p>&copy; 2026 GACEC SYSTEMS. All rights reserved.</p>
+                <div class="flex space-x-6 mt-4 md:mt-0">
+                    <a href="#" class="hover:text-safety transition-colors">PRIVACY_PROTOCOL</a>
+                    <a href="#" class="hover:text-safety transition-colors">TERMS_OF_ENGAGEMENT</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top -->
+    <button id="back-to-top"
+        class="fixed bottom-8 right-8 w-12 h-12 bg-safety text-white flex items-center justify-center opacity-0 invisible transition-all hover:bg-white hover:text-industrial z-50 tech-border"
+        aria-label="Back to top">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18" />
+        </svg>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
